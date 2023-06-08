@@ -11,7 +11,7 @@ var changeState = function (state){
 		timer = setInterval(function () {
 			countdownNumber = countdownNumber-1;
 			document.getElementById ('countdown').innerHTML = countdownNumber;
-			if (countdownNumber<=-1) {				
+			if (countdownNumber<=0) {				
 				changeState(3);
 			}
 		},500);
@@ -22,7 +22,7 @@ var changeState = function (state){
 				var randomNumber = Math.round(Math.random()*10);
 				console.log('randomNumber',randomNumber)
 				//success
-				if (randomNumber>1) {
+				if (randomNumber>2) {
 					changeState(4);
 				//failure
 				}else {
